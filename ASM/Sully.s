@@ -24,16 +24,10 @@ main:
     push rbp
     mov rbp, rsp
     sub rsp, 32
-
-    ; Valeur initiale de l'indice (5 pour le fichier principal)
     mov r12, 5
-
     cmp r12, 0
     jl exit
-
     mov rbx, r12
-    dec rbx
-
     cmp rbx, 0
     jl exit
 
@@ -43,6 +37,8 @@ main:
     mov rdx, rbx
     xor eax, eax
     call sprintf
+    mov r14, r12
+    dec r14
 
     ; 2. Créer / Ouvrir le fichier
     mov rax, SYS_OPEN
