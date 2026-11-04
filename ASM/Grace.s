@@ -1,4 +1,3 @@
-
 ; Creation d'un fichier contenant bonjour
 
 %define SYS_OPEN 2

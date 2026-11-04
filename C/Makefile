@@ -34,8 +34,11 @@ $(SULLY_OUT): $(SULLY_SRC)
 
 clean:
 	@rm -f *.o
+	@rm -f Sully_*
 
 fclean: clean
 	@rm -f $(COLLEEN_OUT) $(GRACE_OUT) $(SULLY_OUT)
+	@rm -f Grace_kid.c
+	@rm -f Sully_*.c
 
 re: fclean all
